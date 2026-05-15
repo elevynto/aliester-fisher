@@ -17,7 +17,10 @@ cat .vercel/project.json
 }
 ```
 
-### GitHub repo → Settings → Secrets and variables → Actions
+### Vercel token location
+[https://vercel.com/account/tokens](https://vercel.com/account/tokens)
+
+### GitHub repo → Settings → Secrets and variables → Actions → New repository secret
 Create these 3 secrets:
 
 - VERCEL_TOKEN
