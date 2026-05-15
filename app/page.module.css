@@ -1,0 +1,181 @@
+.heroHeading {
+  margin-bottom: 62px;
+  max-width: 612px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(24px, 4vw, 46px);
+  align-items: start;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.pitchWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.heroPortrait {
+  width: clamp(140px, 24vw, 220px);
+  height: clamp(140px, 24vw, 220px);
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  margin-top: 12px;
+}
+
+.tagline {
+  color: var(--fg);
+  font-size: clamp(1.5rem, 3.2vw, 1.875rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.pitch {
+  color: var(--fg-body);
+  max-width: 62ch;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 70px;
+}
+
+.ctaMeta {
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+}
+
+.credibility {
+  margin-top: 65px;
+  margin-bottom: 35px;
+  padding: clamp(18px, 3vw, 24px) clamp(20px, 3vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--fg);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  /* Adjust the breakpoint as needed */
+  .credibility {
+    margin-top: 76px;
+    margin-bottom: 40px;
+  }
+}
+
+.phaseList {
+  list-style: decimal;
+  padding-left: 1.6em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.phaseList > li {
+  padding-left: 4px;
+  color: var(--fg-body);
+}
+
+.phaseList > li::marker {
+  color: var(--fg-muted);
+  font-weight: 600;
+}
+
+.phaseList > li > * + * {
+  margin-top: 8px;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(24px, 4vw, 46px);
+  align-items: start;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.aboutPortrait {
+  width: clamp(140px, 24vw, 220px);
+  height: clamp(140px, 24vw, 220px);
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.aboutLead {
+  color: var(--fg-muted);
+  margin-top: 6px;
+}
+
+.quote {
+  margin: 0;
+  padding: 4px 0 4px 16px;
+  border-left: 3px solid var(--fg);
+  color: var(--fg);
+  font-style: italic;
+}
+
+.companyMeta {
+  color: var(--fg-body);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footerWrap {
+  padding-top: var(--section-gap);
+  padding-bottom: clamp(40px, 6vw, 64px);
+}
+
+.headingBreak {
+  display: none;
+}
+
+.priceRange {
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .headingBreak {
+    display: inline;
+  }
+  .headingDash {
+    display: none;
+  }
+
+  .heroHeading {
+    font-size: 1.8rem;
+    margin-bottom: 56px;
+  }
+
+  .heroGrid,
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroPortrait {
+    width: 80%;
+    height: auto;
+    margin-top: 50px;
+    order: 1;
+  }
+  .aboutPortrait {
+    order: -1;
+  }
+}
