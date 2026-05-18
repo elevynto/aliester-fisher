@@ -12,7 +12,7 @@ const siteUrl = "https://aliesterfisher.dev";
 const siteName = "Aliester Fisher Consulting";
 const title = "Aliester Fisher — AI-Enabled Engineering Consultant";
 const description =
-  "Production-ready AI-enabled engineering systems. Aliester Fisher helps engineering teams integrate AI into trusted development workflows without sacrificing code quality or architecture.";
+  "Aliester Fisher helps engineering teams integrate AI into software delivery safely, operationally, and at scale through reliable AI-enabled engineering systems.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -109,10 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-GB" className={inter.variable}>
       <body>
         {children}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>
   );
