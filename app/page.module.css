@@ -151,6 +151,10 @@
   white-space: nowrap;
 }
 
+.mobilePortrait {
+  display: none;
+}
+
 @media (max-width: 520px) {
   .headingBreak {
     display: inline;
@@ -164,16 +168,26 @@
     margin-bottom: 56px;
   }
 
+  .heroPortrait {
+    display: none;
+  }
+
+  .mobilePortrait {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-top: 74px;
+    margin-bottom: 36px;
+    order: 1;
+    justify-self: center;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+  }
+
   .heroGrid,
   .aboutGrid {
     grid-template-columns: 1fr;
-  }
-
-  .heroPortrait {
-    width: 80%;
-    height: auto;
-    margin-top: 50px;
-    order: 1;
   }
   .aboutPortrait {
     order: -1;

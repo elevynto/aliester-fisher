@@ -46,6 +46,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+}
+
 img,
 svg {
   display: block;
@@ -126,10 +133,15 @@ main {
   padding-right: var(--container-padding);
 }
 
-.section, footer {
+.section,
+footer {
   padding-top: 60px;
   padding-bottom: 60px;
   border-top: 1px solid var(--border);
+}
+
+footer h2 {
+  margin-bottom: 16px;
 }
 
 header.section {

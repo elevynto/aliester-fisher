@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Section } from "./components/Section";
 import { CallButton } from "./components/CallButton";
 import styles from "./page.module.css";
+import { BOOKING_URL } from "../constants/urls";
 
 export default function Page() {
   return (
@@ -16,15 +17,14 @@ export default function Page() {
 
         <div className={styles.heroGrid}>
           <div className={styles.heroContent}>
-            <p className={styles.tagline}>Production-ready AI-enabled engineering systems.</p>
+            <p className={styles.tagline}>Reliable AI-enabled engineering systems for modern teams.</p>
             <div className={styles.pitchWrap}>
               <p className={styles.pitch}>
-                I help engineering teams build scalable, production-ready development systems that safely integrate
-                AI-assisted workflows.
+                I help engineering teams integrate AI into software delivery safely, operationally, and at scale.
               </p>
               <p className={styles.pitch}>
-                Most teams are experimenting with AI-assisted development — I help turn that into a reliable, scalable
-                engineering system.
+                Most teams are experimenting with AI-assisted development — I help turn that into a reliable engineering
+                practice.
               </p>
             </div>
           </div>
@@ -46,6 +46,14 @@ export default function Page() {
       <p className={styles.credibility}>
         12+ years building scalable production systems across fintech, startups, and complex engineering environments.
       </p>
+      <Image
+        className={styles.mobilePortrait}
+        src="/profile.png"
+        alt="Portrait of Aliester Fisher"
+        width={321}
+        height={321}
+        priority
+      />
       <Section title="Most teams are using AI… but not effectively">
         <p>AI coding tools are powerful, but in most teams they lead to:</p>
         <ul>
@@ -108,28 +116,27 @@ export default function Page() {
         </ol>
       </Section>
 
-      <Section title="What you get">
+      <Section title="What I implement for your team">
         <ul>
-          <li>faster and more consistent feature delivery</li>
-          <li>validation and reliability systems</li>
-          <li>more consistent engineering delivery</li>
-          <li>improved maintainability</li>
-          <li>architecture-aligned implementation</li>
-          <li>scalable onboarding patterns</li>
-          <li>clearer development standards</li>
+          <li>repository-aware AI development workflows</li>
+          <li>structured feature delivery patterns</li>
+          <li>validation and reliability layers</li>
+          <li>architecture-aligned implementation standards</li>
+          <li>repeatable onboarding processes</li>
+          <li>AI-assisted development guardrails</li>
+          <li>scoped workflows for refactoring, testing, and documentation</li>
         </ul>
-        <p>
-          Engagements typically range from <strong className={styles.priceRange}>£3000–£5000</strong>, depending on scope.
-        </p>
       </Section>
 
-      <Section title="What this enables">
+      <Section title="The engineering outcomes you'll get">
         <ul>
-          <li>faster feature delivery</li>
-          <li>consistent AI usage across your team</li>
-          <li>improved trust in generated code</li>
-          <li>reduced rework and debugging</li>
-          <li>scalable, repeatable engineering workflows</li>
+          <li>faster feature delivery with less rework</li>
+          <li>more consistent implementation quality</li>
+          <li>improved trust in AI-assisted development</li>
+          <li>reduced architectural drift across teams</li>
+          <li>scalable engineering workflows</li>
+          <li>clearer development standards and practices</li>
+          <li>safer, more consistent AI adoption across delivery teams</li>
         </ul>
       </Section>
 
@@ -144,8 +151,8 @@ export default function Page() {
             systems.
           </p>
           <p>
-            Today, I help engineering teams modernise software delivery workflows through structured, AI-enabled
-            engineering systems.
+            Today, I help engineering teams modernise software delivery through structured, AI-enabled engineering
+            systems.
           </p>
           <p className={styles.aboutLead}>My focus is simple:</p>
           <blockquote className={styles.quote}>
@@ -156,8 +163,8 @@ export default function Page() {
 
       <Section title="Thinking about integrating AI into your engineering workflow?">
         <p>
-          If your team is already experimenting with AI tools but struggling to use them effectively, I can help you
-          structure this properly.
+          If your team is already using AI in development but lacks consistent workflows, validation, or engineering
+          structure around it, I can help.
         </p>
         <div className={styles.ctaRow}>
           <CallButton />
@@ -176,14 +183,19 @@ export default function Page() {
 
       <footer className="footer">
         <h2>Contact</h2>
-        <p>Prefer to reach out directly?</p>
         <p>
           Email: <a href="mailto:hello@aliesterfisher.dev">hello@aliesterfisher.dev</a>
         </p>
         <p>
           LinkedIn:{" "}
           <a href="https://www.linkedin.com/in/aliesterfisher/" rel="me noopener" target="_blank">
-            https://www.linkedin.com/in/aliesterfisher/
+            linkedin.com/in/aliesterfisher
+          </a>
+        </p>
+        <p>
+          Calendly:{" "}
+          <a href={BOOKING_URL} rel="me noopener" target="_blank">
+            Book a 30-min call
           </a>
         </p>
         <div className={styles.footerWrap} />

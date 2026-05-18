@@ -1,4 +1,4 @@
-const BOOKING_URL = "https://calendly.com/aliesterfisher/agentic-development-intro-call";
+import { BOOKING_URL } from "../../constants/urls";
 
 export function CallButton({ label = "Book a 30-min call" }: { label?: string }) {
   return (
